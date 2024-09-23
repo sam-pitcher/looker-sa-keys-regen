@@ -14,25 +14,30 @@ Ensure you have the following installed before running the scripts:
 
 ## Spin Up VM in GCP
 
-Make the script files executable.
+Install necessary packages.
 ```
-chmod +x install_terraform.sh
-chmod +x setup.sh
-chmod +x run_script.sh
+sudo apt-get update
+sudo apt-get install -y git unzip python3 python3-venv python3-pip
+git --version
 ```
-Install terraform
-```
-bash run_script.sh
-```
-Install Python and Pip
-```
-bash setup.sh
-```
+
 Clone this repo
 ```
 git clone https://github.com/sam-pitcher/looker-sa-keys-regen.git
 cd looker-sa-keys-regen
 ```
+
+Make the script files executable.
+```
+chmod +x install_terraform.sh
+chmod +x run_script.sh
+```
+
+Install terraform
+```
+bash install_terraform.sh
+```
+
 Create and activate a virtual environment. Install the looker-sdk with pip.
 ```
 python3 -m venv venv
