@@ -61,46 +61,6 @@ Run the script
 bash run_script.sh -project my-gcp-project -region us-central1 -service_account_email my-service-account@my-gcp-project.iam.gserviceaccount.com -connection_name my-db-connection
 ```
 
-
-### Update variables:
-Update the terraform.tfvars file:
-You can define your variable values in a terraform.tfvars file:
-
-```hcl
-project="your-gcp-project-id"
-region="your-gcp-region"
-service_account_email="your-service-account-email"
-```
-OR write the variables in the plan.sh file.
-
-### Terraform Bash Script
-
-You can use the following script to initialize Terraform, plan, and apply changes. Make sure to replace the placeholder values with your actual project, region, and service account email.
-
-```bash
-#!/bin/bash
-
-# Initialize Terraform
-terraform init
-
-# Define variables for project, region, and service account email
-PROJECT="GCP-PROJECT-NAME"
-REGION="us-central1"
-SERVICE_ACCOUNT_EMAIL="SA-EMAIL"
-
-# Run Terraform plan
-terraform plan \
-  -var="project=$PROJECT" \
-  -var="region=$REGION" \
-  -var="service_account_email=$SERVICE_ACCOUNT_EMAIL"
-
-# Apply the Terraform configuration
-terraform apply -auto-approve \
-  -var="project=$PROJECT" \
-  -var="region=$REGION" \
-  -var="service_account_email=$SERVICE_ACCOUNT_EMAIL"
-```
-
 ### Python Script for Service Account Key and Looker API
 
 This Python script decodes a base64-encoded service account key output by Terraform, saves it to a JSON file, and initializes the Looker SDK to update a BigQuery connection with the credentials.

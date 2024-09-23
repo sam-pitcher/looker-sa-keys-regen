@@ -14,10 +14,10 @@ git --version
 
 # Clone the repository
 echo "Cloning the repository..."
-git clone https://github.com/sam-pitcher/regenerate-looker-sa-keys.git
+git clone https://github.com/sam-pitcher/looker-sa-keys-regen.git
 
 # Change to the repository directory
-cd regenerate-looker-sa-keys || { echo "Failed to change directory"; exit 1; }
+cd looker-sa-keys-regen || { echo "Failed to change directory"; exit 1; }
 
 # Create a virtual environment
 echo "Creating a virtual environment..."
@@ -29,4 +29,4 @@ source venv/bin/activate
 
 pip3 install -r requirements.txt
 
-echo "Setup complete. You are now in the 'regenerate-looker-sa-keys' directory with the virtual environment activated."
+echo "Setup complete. You are now in the 'looker-sa-keys-regen' directory with the virtual environment activated."
