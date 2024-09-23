@@ -2,14 +2,6 @@
 
 This repository provides a Terraform configuration to manage a Google Cloud service account key and rotate in a Looker connection.
 
-## Prerequisites
-
-Ensure you have the following installed before running the scripts:
-
-- [Terraform](https://www.terraform.io/downloads.html) (v1.0.0+)
-- [Google Cloud SDK](https://cloud.google.com/sdk/docs/install) (for authentication)
-- A Google Cloud project with the necessary permissions
-
 # Setup
 
 ## Spin Up VM in GCP
