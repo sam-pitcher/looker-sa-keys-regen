@@ -31,6 +31,4 @@ terraform apply -auto-approve \
 
 terraform output -json > service_account_key_base64.json
 
-pip3 install -r requirements.txt
-
 python3 main.py --connection_name "$CONNECTION_NAME"

@@ -68,8 +68,13 @@ Make sure you are authenticated with Google Cloud:
 gcloud auth application-default login
 ```
 Run the script
+- your_project_id Project associated with Service Account
+- region us-central1
+- service_account_email Service Account used for Looker > BigQuery
+- connection_name: Connection Name set up in Looker
 ```
-bash run_script.sh -project my-gcp-project -region us-central1 -service_account_email my-service-account@my-gcp-project.iam.gserviceaccount.com -connection_name my-db-connection
+bash run_script.sh -p your_project_id -r region -s your_service_account_email -c connection_name
+
 ```
 
 ### Python Script for Service Account Key and Looker API
@@ -83,5 +88,7 @@ This Python script decodes a base64-encoded service account key output by Terraf
 3. **Writes the key to a `credentials_file.json` file**.
 4. **Initializes the Looker SDK** and authenticates with provided credentials.
 5. **Updates a Looker BigQuery connection** by including the service account credentials.
+
+## Stop the VM
 
 sampitcher# looker-sa-keys-regen
