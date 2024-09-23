@@ -31,4 +31,4 @@ terraform apply -auto-approve \
 
 terraform output -json > service_account_key_base64.json
 
-python3 main.py --connection_name "$CONNECTION_NAME"
+python3 main.py --connection_name="$CONNECTION_NAME"
