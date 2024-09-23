@@ -30,8 +30,14 @@ bash setup.sh
 ```
 Clone this repo
 ```
-git clone https://github.com/sam-pitcher/regenerate-looker-sa-keys.git
-cd regenerate-looker-sa-keys
+git clone https://github.com/sam-pitcher/looker-sa-keys-regen.git
+cd looker-sa-keys-regen
+```
+Create and activate a virtual environment. Install the looker-sdk with pip.
+```
+python3 -m venv venv
+source venv/bin/activate
+pip3 install -r requirements.txt
 ```
 Update the looker.ini file with Admin Credentials
 ```
