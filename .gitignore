@@ -1,0 +1,9 @@
+terraform.tfstate
+terraform.tfstate.backup
+.terraform.lock.hcl
+.terraform/
+credentials_file.json
+service_account_key_base64.json
+test.py
+test.sh
+looker_test.ini
