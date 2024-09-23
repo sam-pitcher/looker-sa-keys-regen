@@ -14,13 +14,19 @@ Ensure you have the following installed before running the scripts:
 
 ## Spin Up VM in GCP
 
-Install Git and unzip (for installing terraform) on a Debian/Ubuntu system:
-```bash
-sudo apt-get update
-sudo apt-get install git
-sudo apt-get install unzip
-sudo apt-get install python3
-git --version
+Make the script files executable.
+```
+chmod +x install_terraform.sh
+chmod +x setup.sh
+chmod +x run_script.sh
+```
+Install terraform
+```
+bash run_script.sh
+```
+Install Python and Pip
+```
+bash setup.sh
 ```
 Clone this repo
 ```
@@ -41,11 +47,6 @@ client_id=YourClientID
 client_secret=YourClientSecret
 # Set to false if testing locally against self-signed certs. Otherwise leave True
 verify_ssl=True
-```
-Make the script files executable.
-```
-chmod +x install_terraform.sh
-chmod +x run_script.sh
 ```
 
 ### Authentication with Google Cloud:
